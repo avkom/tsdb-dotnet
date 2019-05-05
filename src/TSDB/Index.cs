@@ -4,7 +4,7 @@ namespace TSDB
 {
     public class Index : IIndex
     {
-        public void Insert(long hash, List<Label> labels)
+        public void Insert(ulong hash, List<Label> labels)
         {
         }
 

@@ -1,4 +1,6 @@
-﻿namespace TSDB
+﻿using System.Collections.Generic;
+
+namespace TSDB
 {
     public class Tsdb : ITsdb
 
@@ -21,6 +23,15 @@
         public QueryResult Query(Query query)
         {
             return new QueryResult();
+        }
+
+        private ulong CalculateHash(List<Label> labels)
+        {
+            ulong hash = 0;
+
+            labels.ForEach(label => hash ^= (uint)label.Name.GetHashCode() << 32 ^ (uint)label.Value.GetHashCode());
+
+            return hash;
         }
     }
 }

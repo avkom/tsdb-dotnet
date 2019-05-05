@@ -4,7 +4,7 @@ namespace TSDB
 {
     public interface IWalAppender
     {
-        void WriteLabels(long hash, List<Label> labels);
-        void WriteSamples(long hash, List<Sample> labels);
+        void WriteLabels(ulong hash, List<Label> labels);
+        void WriteSamples(ulong hash, List<Sample> samples);
     }
 }

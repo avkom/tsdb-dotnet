@@ -4,17 +4,17 @@ namespace TSDB
 {
     public class SampleStorage : ISampleStorage
     {
-        public bool Exists(long hash)
+        public bool Exists(ulong hash)
         {
             return false;
         }
 
-        public List<Sample> Get(long startTimestamp, long endTimestamp, long hash)
+        public List<Sample> Get(long startTimestamp, long endTimestamp, ulong hash)
         {
             return new List<Sample>();
         }
 
-        public void Insert(long hash, List<Sample> samples)
+        public void Insert(ulong hash, List<Sample> samples)
         {
         }
     }

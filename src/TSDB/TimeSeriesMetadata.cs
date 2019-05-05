@@ -4,7 +4,7 @@ namespace TSDB
 {
     public class TimeSeriesMetadata
     {
-        public long Hash { get; set; }
+        public ulong Hash { get; set; }
         public List<Label> Labels { get; set; }
     }
 }

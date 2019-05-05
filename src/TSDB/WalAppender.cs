@@ -4,11 +4,11 @@ namespace TSDB
 {
     public class WalAppender : IWalAppender
     {
-        public void WriteLabels(long hash, List<Label> labels)
+        public void WriteLabels(ulong hash, List<Label> labels)
         {
         }
 
-        public void WriteSamples(long hash, List<Sample> labels)
+        public void WriteSamples(ulong hash, List<Sample> samples)
         {
         }
     }
