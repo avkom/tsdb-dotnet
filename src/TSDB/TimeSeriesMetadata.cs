@@ -2,9 +2,9 @@
 
 namespace TSDB
 {
-    public class TimeSeries
+    public class TimeSeriesMetadata
     {
+        public long Hash { get; set; }
         public List<Label> Labels { get; set; }
-        public List<Sample> Samples { get; set; }
     }
 }
